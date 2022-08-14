@@ -1,0 +1,33 @@
+
+    CREATE TABLE store (id INTEGER PRIMARY KEY, Name TEXT, Size INTEGER, 
+    Price INTEGER, Aisle INTEGER, Popularity INTEGER);
+
+INSERT into store Values (1, "Pepsi", 16, 1.79, 1, 95);
+INSERT into store Values (2, "Diet Pepsi", 16, 1.79, 1, 60);
+INSERT into store Values (3, "Mt Dew", 16, 1.79, 1, 85); 
+INSERT into store Values (4, "Fanta", 16, 1.79, 1, 70); 
+INSERT into store Values (5, "Coke", 16, 1.79, 1, 97); 
+INSERT into store Values (6, "Diet Coke", 16, 1.79, 1, 74); 
+INSERT into store Values (7, "Sprite" , 16, 1.79, 1, 45);
+INSERT into store Values (8, "Rootbeer", 16, 1.79, 1, 35); 
+INSERT into store Values (9, "Club Soda", 10, 5.99, 6, 21); 
+INSERT into store Values (10, "Ginger Ale", 10, 5.99, 6, 15); 
+INSERT into store Values (11, "Voss Water", 32, 2.99, 14, 45); 
+INSERT into store Values (12, "Smart Water", 32, 2.49, 14, 68); 
+INSERT into store Values (13, "Aquafina", 20, 1.99, 14, 94); 
+INSERT into store Values (14, "Redbull", 8, 2.99, 3, 70); 
+INSERT into store Values (15, "Monster", 24, 3.99, 3, 87);
+INSERT into store Values (16, "Bang", 16, 1.99, 3, 92);
+
+SELECT * FROM store;
+
+-- Display the database ordered by price 
+
+SELECT * FROM store 
+ORDER BY price desc; 
+
+-- What are the five most popular drinks
+
+SELECT Name, price, popularity FROM store
+ORDER by popularity desc 
+LIMIT 5;
